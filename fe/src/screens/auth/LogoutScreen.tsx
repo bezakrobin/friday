@@ -1,0 +1,13 @@
+import React from "react";
+import { View } from "react-native";
+
+const LogoutScreen = () => {
+
+    return (
+        <View>
+            LogoutScreen
+        </View>
+    );
+};
+
+export default LogoutScreen;
