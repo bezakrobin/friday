@@ -3,14 +3,25 @@ networks:
     driver: bridge
 
 services:
-  expo-frontend:
-    container_name: friday-expo-frontend
+  friday-frontend:
+    container_name: friday-frontend
     build:
-      context: ./frontend/mobile
+      context: ./frontend
       dockerfile: Dockerfile
-    ports:
-      - "8081:8081"
     volumes:
-      - ./frontend/mobile:/app
+      - ./frontend:/app
     networks:
       - shared_network
+    depends_on:
+      - friday-updater
+
+  friday-updater:
+    container_name: friday-updater
+    build:
+      context: ./updater
+      dockerfile: Dockerfile
+    volumes:
+      - .:/repo
+    networks:
+      - shared_network
+    restart: always
