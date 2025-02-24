@@ -34,7 +34,7 @@ async function cleanupDocker() {
         console.log('Cleaning up unused Docker resources...');
         return new Promise((resolve, reject) => {
             // Remove unused Docker images, containers, networks, and volumes
-            exec('docker system prune -f && docker volume prune -f', (error, stdout, stderr) => {
+            exec('docker system prune -f && docker volume prune -f', { cwd: path.join(__dirname, '..') }, (error, stdout, stderr) => {
                 if (error) {
                     console.error(`Error cleaning up Docker: ${stderr}`);
                     reject(stderr);
@@ -69,7 +69,7 @@ async function checkForUpdates() {
 
             // Pull latest changes from the 'deploy' branch and update Docker containers
             return new Promise((resolve, reject) => {
-                exec('git pull origin deploy && docker-compose down && docker-compose up --build -d', async (error, stdout, stderr) => {
+                exec('git pull origin deploy && docker-compose down && docker-compose up --build -d', { cwd: path.join(__dirname, '..') }, async (error, stdout, stderr) => {
                     if (error) {
                         console.error(`Error updating: ${stderr}`);
                         reject(stderr);
