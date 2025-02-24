@@ -13,7 +13,7 @@ const SplashScreen = () => {
                 <Text style={styles.text}>F. R. I. D. A. Y.</Text>
 
                 <View style={styles.rotatingTextContainer}>
-                    <FR_RotatingText texts={["life", "work", "home"]} interval={2000} />
+                    <FR_RotatingText text={"Automate your"} texts={["life", "work", "home", "app"]} interval={2000} />
                 </View>
 
                 <View style={styles.buttonContainer}>

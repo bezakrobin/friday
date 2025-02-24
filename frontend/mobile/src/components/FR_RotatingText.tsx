@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { View, Text, Animated, StyleSheet } from "react-native";
 
 interface FR_RotatingTextProps {
+    text: string;
     texts: string[];
     interval?: number;
 }
 
-const FR_RotatingText: React.FC<FR_RotatingTextProps> = ({ texts, interval = 2000 }) => {
+const FR_RotatingText: React.FC<FR_RotatingTextProps> = ({ text, texts, interval = 2000 }) => {
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const fadeAnim = useState(new Animated.Value(1))[0];
     const translateAnim = useState(new Animated.Value(0))[0];
@@ -53,7 +54,7 @@ const FR_RotatingText: React.FC<FR_RotatingTextProps> = ({ texts, interval = 200
 
     return (
         <View style={styles.container}>
-            <Text style={styles.staticText}>Automate your </Text>
+            <Text style={styles.staticText}>{text} </Text>
 
             <View style={[styles.rotatingTextContainer, { width: longestWord.length * 14 }]}>
                 <Animated.Text
