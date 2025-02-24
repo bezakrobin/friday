@@ -14,16 +14,3 @@ services:
       - ./frontend/mobile:/app
     networks:
       - shared_network
-    depends_on:
-      - updater
-
-  updater:
-    container_name: friday-updater
-    build:
-      context: ./updater
-      dockerfile: Dockerfile
-    volumes:
-      - ./updater:/app
-    networks:
-      - shared_network
-    restart: always
