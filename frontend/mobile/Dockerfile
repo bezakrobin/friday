@@ -4,11 +4,14 @@ FROM node:18-alpine
 # Set working directory
 WORKDIR /app
 
+# Copy package.json and package-lock.json separately to leverage Docker caching
+COPY package.json package-lock.json ./
+
+# Install expo explicitly and other dependencies
+RUN npm install expo@52.0.37 --save && npm install --force
+
 # Copy the rest of the app files
 COPY . .
-
-# Install dependencies
-RUN npm install --force
 
 # Expose the port Expo runs on
 EXPOSE 8081
