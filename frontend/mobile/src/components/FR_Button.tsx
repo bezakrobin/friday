@@ -22,7 +22,7 @@ const FR_Button: React.FC<FR_ButtonProps> = ({
             mode="contained"
             onPress={onPress}
             style={[styles.button, sx]}
-            labelStyle={[styles.buttonLabel, { fontSize, color: textColor }]}
+            labelStyle={[styles.buttonLabel, { fontSize: fontSize, color: textColor }]}
             rippleColor={"rgba(255, 255, 255, 0.3)"}
             contentStyle={styles.buttonContent}
         >
