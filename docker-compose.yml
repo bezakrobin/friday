@@ -12,6 +12,18 @@ services:
       - "8081:8081"
     volumes:
       - ./frontend/mobile:/app
-      - /app/node_modules
     networks:
       - shared_network
+    depends_on:
+      - updater
+
+  updater:
+    container_name: friday-updater
+    build:
+      context: ./updater
+      dockerfile: Dockerfile
+    volumes:
+      - ./updater:/app
+    networks:
+      - shared_network
+    restart: always
