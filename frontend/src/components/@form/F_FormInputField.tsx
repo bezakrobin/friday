@@ -1,5 +1,6 @@
-import React from "react";
-import { TextField } from "@mui/material";
+import React, { useState } from "react";
+import {IconButton, InputAdornment, TextField} from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 interface F_FormInputFieldProps {
     label: string;
@@ -18,10 +19,16 @@ export const F_FormInputField: React.FC<F_FormInputFieldProps> = ({
                                                                       onChange,
                                                                       required = false,
                                                                   }) => {
+    const [showPassword, setShowPassword] = useState(false);
+
+    const handleClickShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
+
     return (
         <TextField
             label={label}
-            type={type}
+            type={type === "password" && !showPassword ? "password" : "text"}
             name={name}
             value={value}
             onChange={onChange}
@@ -44,6 +51,19 @@ export const F_FormInputField: React.FC<F_FormInputFieldProps> = ({
                 "& .MuiInputLabel-root.Mui-focused": {
                     color: "#FC601D",
                 },
+            }}
+            InputProps={{
+                endAdornment: type === "password" && (
+                    <InputAdornment position={"end"}>
+                        <IconButton
+                            aria-label={"toggle password visibility"}
+                            onClick={handleClickShowPassword}
+                            edge={"end"}
+                        >
+                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                    </InputAdornment>
+                )
             }}
         />
     );
