@@ -3,20 +3,20 @@ networks:
     driver: bridge
 
 services:
-  friday-frontend:
-    container_name: friday-frontend
+  frontend:
+    container_name: frontend
     build:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "3000:80"
+      - "80:80"
     networks:
       - shared_network
     depends_on:
       - friday-updater
 
-  friday-updater:
-    container_name: friday-updater
+  updater:
+    container_name: updater
     build:
       context: ./updater
       dockerfile: Dockerfile
