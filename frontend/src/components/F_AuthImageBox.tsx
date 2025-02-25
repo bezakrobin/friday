@@ -16,7 +16,7 @@ export const F_AuthImageBox: React.FC = () => {
         >
             <img
                 src={backgroundImage as string}
-                alt={"sign in image"}
+                alt={"Auth Image"}
                 style={{
                     objectFit: "cover",
                     width: "100%",
