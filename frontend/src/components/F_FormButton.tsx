@@ -5,7 +5,6 @@ interface F_FormButtonProps {
     label: string;
     onClick: React.MouseEventHandler<HTMLButtonElement>;
     variant?: "text" | "outlined" | "contained";
-    color?: "default" | "primary" | "secondary";
     fullWidth?: boolean;
 }
 
@@ -13,20 +12,19 @@ export const F_FormButton: React.FC<F_FormButtonProps> = ({
                                                               label,
                                                               onClick,
                                                               variant = "contained",
-                                                              color = "primary",
                                                               fullWidth = false,
                                                           }) => {
     return (
         <Button
             onClick={onClick}
             variant={variant}
-            color={color}
             fullWidth={fullWidth}
             sx={{
                 marginTop: "1rem",
                 padding: "12px 16px",
                 fontWeight: "bold",
                 fontSize: "1rem",
+                backgroundColor: "#FC601D", "&:hover": { backgroundColor: "#FC601D" }
             }}
         >
             {label}

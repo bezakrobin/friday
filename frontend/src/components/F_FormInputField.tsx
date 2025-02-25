@@ -33,6 +33,17 @@ export const F_FormInputField: React.FC<F_FormInputFieldProps> = ({
                 "& .MuiInputLabel-root": {
                     fontWeight: "bold",
                 },
+                "& .MuiOutlinedInput-root": {
+                    "&:hover fieldset": {
+                        borderColor: "#FC601D",
+                    },
+                    "&.Mui-focused fieldset": {
+                        borderColor: "#FC601D",
+                    },
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#FC601D",
+                },
             }}
         />
     );
