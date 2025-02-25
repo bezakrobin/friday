@@ -13,7 +13,7 @@ services:
     networks:
       - shared_network
     depends_on:
-      - friday-updater
+      - updater
 
   updater:
     container_name: updater
