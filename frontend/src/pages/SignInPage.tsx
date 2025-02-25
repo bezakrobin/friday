@@ -5,6 +5,7 @@ import { F_AuthFormLayout } from "../layouts/F_AuthFormLayout.tsx";
 import { F_FormTitle } from "../components/F_FormTitle.tsx";
 import { F_FormSubtitle } from "../components/F_FormSubtitle.tsx";
 import { F_FormInputField } from "../components/F_FormInputField.tsx";
+import {F_FormButton} from "../components/F_FormButton.tsx";
 
 export const SignInPage: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -18,6 +19,10 @@ export const SignInPage: React.FC = () => {
             ...prevData,
             [name]: value,
         }));
+    };
+
+    const handleSubmit = () => {
+        console.log(formData);
     };
 
     return (
@@ -34,13 +39,19 @@ export const SignInPage: React.FC = () => {
                         value={formData.username}
                         onChange={handleChange}
                     />
-
                     <F_FormInputField
                         label="Password"
                         type="password"
                         name="password"
                         value={formData.password}
                         onChange={handleChange}
+                    />
+                    <F_FormButton
+                        label="Submit"
+                        onClick={handleSubmit}
+                        variant="contained"
+                        color="primary"
+                        fullWidth
                     />
                 </F_AuthFormLayout>
             }
