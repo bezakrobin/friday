@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { F_AuthLayout } from "../layouts/F_AuthLayout.tsx";
-import { F_AuthImageBox } from "../components/F_AuthImageBox.tsx";
-import { F_AuthFormLayout } from "../layouts/F_AuthFormLayout.tsx";
-import { F_FormTitle } from "../components/F_FormTitle.tsx";
-import { F_FormSubtitle } from "../components/F_FormSubtitle.tsx";
-import { F_FormInputField } from "../components/F_FormInputField.tsx";
-import {F_FormButton} from "../components/F_FormButton.tsx";
+import backgroundImage from "../../assets/background.jpg";
+import { F_AuthImageBox } from "../@auth";
+import { F_FormButton, F_FormInputField, F_FormSubtitle, F_FormTitle } from "../@form";
+import { F_AuthFormLayout, F_AuthLayout } from "../@layouts";
 
 export const SignInPage: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -27,7 +24,7 @@ export const SignInPage: React.FC = () => {
 
     return (
         <F_AuthLayout
-            leftComponent={ <F_AuthImageBox /> }
+            leftComponent={ <F_AuthImageBox image={backgroundImage as string} /> }
             rightComponent={
                 <F_AuthFormLayout>
                     <F_FormTitle title="Sign In" />

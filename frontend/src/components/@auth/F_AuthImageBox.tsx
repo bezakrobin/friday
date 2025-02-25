@@ -1,8 +1,11 @@
 import React from "react";
 import { Box } from "@mui/material";
-import backgroundImage from "../assets/background.jpg";
 
-export const F_AuthImageBox: React.FC = () => {
+interface F_AuthImageBoxProps {
+    image: string;
+}
+
+export const F_AuthImageBox: React.FC<F_AuthImageBoxProps> = ({ image }) => {
     return (
         <Box
             sx={{
@@ -15,7 +18,7 @@ export const F_AuthImageBox: React.FC = () => {
             }}
         >
             <img
-                src={backgroundImage as string}
+                src={image}
                 alt={"Auth Image"}
                 style={{
                     objectFit: "cover",

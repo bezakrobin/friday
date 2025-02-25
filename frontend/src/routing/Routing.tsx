@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import { SignInPage } from "../pages/SignInPage.tsx";
+import { SignInPage } from "../components/@pages";
 
 export const Routing: React.FC = () => {
     return (
