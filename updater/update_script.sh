@@ -2,6 +2,8 @@
 
 cd /repo
 
+# Set Git Remote
+git remote set-url origin https://github.com/bezakrobin/friday.git
 
 # Fetch latest changes
 git fetch origin main
