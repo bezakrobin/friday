@@ -16,7 +16,7 @@ if [ "$LOCAL" != "$REMOTE" ]; then
   git pull origin main
 
   echo "Rebuilding and restarting all services..."
-  docker compose up --build -d
+  docker-compose up --build -d
 else
   echo "No updates available."
 fi
