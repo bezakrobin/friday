@@ -35,6 +35,7 @@ export const SignInPage: React.FC = () => {
                         name="username"
                         value={formData.username}
                         onChange={handleChange}
+                        required={true}
                     />
                     <F_FormInputField
                         label="Password"
@@ -42,6 +43,7 @@ export const SignInPage: React.FC = () => {
                         name="password"
                         value={formData.password}
                         onChange={handleChange}
+                        required={true}
                     />
                     <F_FormButton
                         label="Submit"
