@@ -8,8 +8,8 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    volumes:
-      - ./frontend:/app
+    ports:
+      - "3000:80"
     networks:
       - shared_network
     depends_on:
@@ -22,6 +22,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/repo
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - shared_network
     restart: always
