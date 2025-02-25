@@ -12,17 +12,3 @@ services:
       - "80:80"
     networks:
       - shared_network
-    depends_on:
-      - updater
-
-  updater:
-    container_name: updater
-    build:
-      context: ./updater
-      dockerfile: Dockerfile
-    volumes:
-      - .:/repo
-      - /var/run/docker.sock:/var/run/docker.sock
-    networks:
-      - shared_network
-    restart: always
