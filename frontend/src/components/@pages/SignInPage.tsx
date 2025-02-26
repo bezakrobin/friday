@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import backgroundImage from "../../assets/background.jpg";
 import { F_AuthImageBox } from "../@auth";
-import { F_FormButton, F_FormInputField, F_FormSubtitle, F_FormTitle } from "../@form";
+import { F_FormButton, F_FormInputField, F_FormSubtitle, F_FormTitle, F_FormClickableText } from "../@form";
 import { F_AuthFormLayout, F_AuthLayout } from "../@layouts";
+import {F_Spacing} from "../@core";
 
 export const SignInPage: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -51,6 +52,18 @@ export const SignInPage: React.FC = () => {
                         variant="contained"
                         color="primary"
                         fullWidth
+                    />
+                    <F_Spacing vertical={30} />
+                    <F_FormClickableText
+                        text={"Forgot your password? Reset it here."}
+                        clickableText={"Reset it here."}
+                        url={"/forgot-password"}
+                    />
+                    <F_Spacing vertical={10} />
+                    <F_FormClickableText
+                        text={"Don't have an account? Sign up now!"}
+                        clickableText={"Sign up now!"}
+                        url={"/sign-up"}
                     />
                 </F_AuthFormLayout>
             }
