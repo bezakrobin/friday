@@ -57,6 +57,8 @@ export const F_FormInputField: React.FC<F_FormInputFieldProps> = ({
             }}
             inputProps={{
                 style: { WebkitBoxShadow: "0 0 0 1000px white inset", color: "#000" },
+            }}
+            InputProps={{
                 endAdornment: type === "password" && (
                     <InputAdornment position={"end"}>
                         <IconButton
