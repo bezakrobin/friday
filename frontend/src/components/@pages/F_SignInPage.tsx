@@ -5,7 +5,7 @@ import { F_FormButton, F_FormInputField, F_FormSubtitle, F_FormTitle, F_FormClic
 import { F_AuthFormLayout, F_AuthLayout } from "../@layouts";
 import { F_Spacing } from "../@core";
 
-export const SignInPage: React.FC = () => {
+export const F_SignInPage: React.FC = () => {
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -32,7 +32,7 @@ export const SignInPage: React.FC = () => {
                     <F_FormSubtitle subtitle="Please enter your credentials to access your account" />
                     <F_FormInputField
                         label="Email"
-                        type="text"
+                        type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
