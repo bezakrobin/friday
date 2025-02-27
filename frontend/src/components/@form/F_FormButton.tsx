@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@mui/material";
 
 interface F_FormButtonProps {
+    id: string;
     label: string;
     onClick: React.MouseEventHandler<HTMLButtonElement>;
     variant?: "text" | "outlined" | "contained";
@@ -9,13 +10,15 @@ interface F_FormButtonProps {
 }
 
 export const F_FormButton: React.FC<F_FormButtonProps> = ({
-                                                              label,
-                                                              onClick,
-                                                              variant = "contained",
-                                                              fullWidth = false,
-                                                          }) => {
+    id,
+    label,
+    onClick,
+    variant = "contained",
+    fullWidth = false,
+}) => {
     return (
         <Button
+            id={id}
             onClick={onClick}
             variant={variant}
             fullWidth={fullWidth}

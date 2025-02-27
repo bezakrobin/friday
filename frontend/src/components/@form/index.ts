@@ -5,3 +5,4 @@ export { F_FormTitle } from "./F_FormTitle.tsx";
 export { F_FormClickableText } from "./F_FormClickableText.tsx";
 export { F_FormCheckbox } from "./F_FormCheckbox.tsx";
 export { F_FormPasswordStrength } from "./F_FormPasswordStrength.tsx";
+export { F_FormSixDigitCodeInputField } from "./F_FormSixDigitCodeInputField.tsx";
