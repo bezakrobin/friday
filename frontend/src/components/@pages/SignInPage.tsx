@@ -3,11 +3,11 @@ import backgroundImage from "../../assets/background.jpg";
 import { F_AuthImageBox } from "../@auth";
 import { F_FormButton, F_FormInputField, F_FormSubtitle, F_FormTitle, F_FormClickableText } from "../@form";
 import { F_AuthFormLayout, F_AuthLayout } from "../@layouts";
-import {F_Spacing} from "../@core";
+import { F_Spacing } from "../@core";
 
 export const SignInPage: React.FC = () => {
     const [formData, setFormData] = useState({
-        username: "",
+        email: "",
         password: "",
     });
 
@@ -31,10 +31,10 @@ export const SignInPage: React.FC = () => {
                     <F_FormTitle title="Sign In" />
                     <F_FormSubtitle subtitle="Please enter your credentials to access your account" />
                     <F_FormInputField
-                        label="Username"
+                        label="Email"
                         type="text"
-                        name="username"
-                        value={formData.username}
+                        name="email"
+                        value={formData.email}
                         onChange={handleChange}
                         required={true}
                     />

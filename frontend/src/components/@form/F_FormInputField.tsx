@@ -47,12 +47,16 @@ export const F_FormInputField: React.FC<F_FormInputFieldProps> = ({
                     "&.Mui-focused fieldset": {
                         borderColor: "#FC601D",
                     },
+                    "& input:-webkit-autofill": {
+                        WebkitTextFillColor: "#000",
+                    },
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
                     color: "#FC601D",
                 },
             }}
-            InputProps={{
+            inputProps={{
+                style: { WebkitBoxShadow: "0 0 0 1000px white inset", color: "#000" },
                 endAdornment: type === "password" && (
                     <InputAdornment position={"end"}>
                         <IconButton
