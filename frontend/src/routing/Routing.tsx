@@ -22,7 +22,6 @@ export const Routing: React.FC = () => {
                 <Route path={"*"} element={ <Navigate to={"/not-found"} /> } />
                 <Route path={"/not-found"} element={ <F_NotFoundPage /> } />
 
-                {/* TODO: CREATE NOT FOUND PAGE */}
                 {/* TODO: CREATE TERMS & CONDITIONS PAGE */}
                 {/* TODO: GET HELP ON GOOGLE AUTHENTICATOR 2FA PAGE */}
                 {/* TODO: CREATE LANDING PAGE */}
