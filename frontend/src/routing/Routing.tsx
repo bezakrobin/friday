@@ -18,19 +18,22 @@ export const Routing: React.FC = () => {
                 <Route path={"/2fa/email"} element={<F_2FA_EmailPage />} />
                 <Route path={"/2fa/google-authenticator"} element={<F_2FA_GoogleAuthenticatorPage />} />
 
-                {/* TODO: TAB INDEX ON EVERY PAGE */}
-                {/* TODO: SELECT FIRST INPUT AFTER PAGE IS LOADED */}
                 {/* TODO: CREATE NOT FOUND PAGE */}
                 {/* TODO: CREATE TERMS & CONDITIONS PAGE */}
-                {/* TODO: RESEND CODE ON EMAIL 2FA PAGE */}
                 {/* TODO: GET HELP ON GOOGLE AUTHENTICATOR 2FA PAGE */}
-                {/* TODO: SIGN UP ACCEPT TERMS AND CONDITIONS CLICKABLE ROUTING TO TERMS & CONDITIONS PAGE */}
-                {/* TODO: PAGE REVEAL ANIMATIONS */}
-                {/* TODO: ANIMATE FORMS */}
+                {/* TODO: CREATE LANDING PAGE */}
+
                 {/* TODO: ADD PAGE NAVBAR */}
                 {/* TODO: ADD PAGE LOGO */}
                 {/* TODO: CREATE CUSTOM TOASTS */}
-                {/* TODO: CREATE LANDING PAGE */}
+
+                {/* TODO: SIGN UP ACCEPT TERMS AND CONDITIONS CLICKABLE ROUTING TO TERMS & CONDITIONS PAGE */}
+                {/* TODO: PAGE REVEAL ANIMATIONS */}
+                {/* TODO: ANIMATE FORMS */}
+                {/* TODO: SELECT FIRST INPUT AFTER PAGE IS LOADED */}
+                {/* TODO: TAB INDEX ON EVERY PAGE */}
+
+                {/* TODO: RESEND CODE ON EMAIL 2FA */}
             </Routes>
         </Router>
     );
